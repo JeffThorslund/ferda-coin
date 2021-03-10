@@ -5,7 +5,7 @@ const { Title, Paragraph, Text, Link } = Typography;
 
 const FerdaIntro = () => {
   return (
-    <Card title="Ferda Coin" headStyle={{ fontWeight: "bold" }}>
+    <Card title="What is Ferda Coin?" headStyle={{ fontWeight: "bold" }}>
       <Text>
         <span>
           A pseudo-cryptocurrency created <b>by the boys, for the boys</b>. By

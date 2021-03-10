@@ -4,23 +4,16 @@ import styled from "styled-components";
 import { colors as c, spacing as s } from "../environment";
 import logo from "../assets/logo.png";
 
-const { Header } = Layout;
+const { Header: AntHeader } = Layout;
 
-const NavWrapper = styled.div`
-  background-color: ${c.LIGHT.string()};
+const NavTitle = styled.div`
+  color: ${c.LIGHT.string()};
   font-size: 20px;
 `;
 
 const Nav = styled.div`
   display: flex;
-  justify-content: space-between;
-  padding: 15px 0px;
   align-items: center;
-`;
-
-const NavTitle = styled.div`
-  font-weight: bold;
-  margin-right: auto;
 `;
 
 const NavImage = styled.img`
@@ -28,20 +21,33 @@ const NavImage = styled.img`
   padding-right: 30px;
 `;
 
-const Headerr = () => {
+// const Headerr = () => {
+//   return (
+//     <NavWrapper>
+//       <Row>
+//         <Col offset={1} span={22}>
+//           <Nav>
+//             <NavImage src={logo} />
+//             <NavTitle>Ferda Coin</NavTitle>
+//             <div> About Us</div>
+//           </Nav>
+//         </Col>
+//       </Row>
+//     </NavWrapper>
+//   );
+// };
+
+// export default Headerr;
+
+const Header = () => {
   return (
-    <NavWrapper>
-      <Row>
-        <Col offset={1} span={22}>
-          <Nav>
-            <NavImage src={logo} />
-            <NavTitle>Ferda Coin</NavTitle>
-            <div> About Us</div>
-          </Nav>
-        </Col>
-      </Row>
-    </NavWrapper>
+    <AntHeader>
+      <Nav>
+        <NavImage src={logo} />
+        <NavTitle>Ferda Coin</NavTitle>
+      </Nav>
+    </AntHeader>
   );
 };
 
-export default Headerr;
+export default Header;

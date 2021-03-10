@@ -14,8 +14,16 @@ const FerdaStats = () => {
       <StatWrapper>
         <Statistic title="Market Cap (CAD)" value={0} suffix="$" />
         <Statistic
-          title="Daily Change"
+          title="24 Hour Change"
           value={11.28}
+          precision={2}
+          valueStyle={{ color: "#73d13d" }}
+          prefix={<ArrowUpOutlined />}
+          suffix="%"
+        />
+        <Statistic
+          title="Overall Change"
+          value={24.15}
           precision={2}
           valueStyle={{ color: "#73d13d" }}
           prefix={<ArrowUpOutlined />}
