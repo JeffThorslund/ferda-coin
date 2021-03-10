@@ -8,7 +8,7 @@ export const colors = {
 };
 
 export const spacing = {
-  GUTTER: "1000px",
+  GUTTER: 40,
 };
 
 //Construct Colors

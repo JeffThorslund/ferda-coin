@@ -1,5 +1,6 @@
 import React from "react";
 import { Layout, Row, Col } from "antd";
+import { spacing as s } from "../environment";
 import Header from "./Header";
 import FerdaPriceGraph from "./FerdaPriceGraph";
 import FerdaStats from "./FerdaStats";
@@ -10,27 +11,33 @@ const { Content } = Layout;
 
 const MainLayout = () => {
   const rowStyle = {
-    paddingTop: "40px",
+    paddingTop: "30px",
   };
 
   return (
     <Layout className="layout">
       <Header />
-      <Content>
-        <Row style={rowStyle}>
-          <Col offset={1} span={5}>
-            <FerdaIntro />
+      <Content style={{ padding: "0 30px" }}>
+        <Row gutter={s.GUTTER} style={rowStyle}>
+          <Col span={11}>
+            <Row gutter={s.GUTTER}>
+              <Col span={24}>
+                <FerdaStats />
+              </Col>
+            </Row>
+            <Row gutter={s.GUTTER} style={rowStyle}>
+              <Col span={24}>
+                <FerdaIntro />
+              </Col>
+            </Row>
           </Col>
-          <Col offset={1} span={16}>
-            <FerdaStats />
+          <Col span={13}>
+            <FerdaScoreBoard />
           </Col>
         </Row>
-        <Row style={rowStyle}>
-          <Col offset={1} span={16}>
+        <Row gutter={s.GUTTER} style={rowStyle}>
+          <Col span={24}>
             <FerdaPriceGraph />
-          </Col>
-          <Col offset={1} span={5}>
-            <FerdaScoreBoard />
           </Col>
         </Row>
       </Content>

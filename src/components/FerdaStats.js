@@ -10,7 +10,7 @@ const StatWrapper = styled.div`
 
 const FerdaStats = () => {
   return (
-    <Card>
+    <Card title="Statistics" headStyle={{ fontWeight: "bold" }}>
       <StatWrapper>
         <Statistic title="Market Cap (CAD)" value={0} suffix="$" />
         <Statistic

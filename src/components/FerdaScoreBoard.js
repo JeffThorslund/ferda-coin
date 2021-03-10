@@ -46,6 +46,8 @@ const FerdaScoreBoard = () => {
       dataIndex: "principal",
       key: "principal",
       render: (text, record, index) => <span>{text} $</span>,
+      sorter: (a, b) => a.principal - b.principal,
+      sortDirections: ["descend", "ascend", "descend"],
     },
     {
       title: "Gain",
@@ -60,18 +62,27 @@ const FerdaScoreBoard = () => {
           </span>
         );
       },
+      sorter: (a, b) => {
+        const convertToPercentage = (record) =>
+          Math.round((record.current / record.principal) * 100);
+
+        return convertToPercentage(a) - convertToPercentage(b);
+      },
+      sortDirections: ["descend", "ascend", "descend"],
     },
     {
       title: "Current",
       dataIndex: "current",
       key: "current",
       render: (text, record, index) => <span>{text} $</span>,
+      sorter: (a, b) => a.current - b.current,
+      sortDirections: ["descend", "ascend", "descend"],
     },
   ];
 
   return (
-    <Card title="Scoreboard" headStyle={{fontWeight: "bold"}}>
-      <Table dataSource={dataSource} columns={columns} />
+    <Card title="Scoreboard" headStyle={{ fontWeight: "bold" }}>
+      <Table dataSource={dataSource} columns={columns} pagination={false} />
     </Card>
   );
 };
