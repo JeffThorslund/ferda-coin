@@ -1,10 +1,10 @@
 import React from "react";
-import { Layout } from "antd";
+import { Layout, Row, Col } from "antd";
 import styled from "styled-components";
 import { colors as c, spacing as s } from "../environment";
 import logo from "../assets/logo.png";
 
-const { Footer, Content } = Layout;
+const { Header } = Layout;
 
 const NavWrapper = styled.div`
   background-color: ${c.LIGHT.string()};
@@ -14,10 +14,7 @@ const NavWrapper = styled.div`
 const Nav = styled.div`
   display: flex;
   justify-content: space-between;
-  padding: 15px;
-  margin: 0 auto;
-  max-width: ${s.GUTTER};
-  width: 100%;
+  padding: 15px 0px;
   align-items: center;
 `;
 
@@ -31,17 +28,20 @@ const NavImage = styled.img`
   padding-right: 30px;
 `;
 
-const Header = () => {
+const Headerr = () => {
   return (
     <NavWrapper>
-      <Nav>
-        <NavImage src={logo} />
-        <NavTitle>Ferda Coin</NavTitle>
-
-        <div> About Us</div>
-      </Nav>
+      <Row>
+        <Col offset={1} span={22}>
+          <Nav>
+            <NavImage src={logo} />
+            <NavTitle>Ferda Coin</NavTitle>
+            <div> About Us</div>
+          </Nav>
+        </Col>
+      </Row>
     </NavWrapper>
   );
 };
 
-export default Header;
+export default Headerr;
