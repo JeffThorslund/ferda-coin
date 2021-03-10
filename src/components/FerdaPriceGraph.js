@@ -1,7 +1,5 @@
 import React from "react";
-import styled from "styled-components";
-import { colors as c, spacing as s } from "../environment";
-import { PageHeader, Card } from "antd";
+import { Card } from "antd";
 import { Line } from "react-chartjs-2";
 
 const data = {

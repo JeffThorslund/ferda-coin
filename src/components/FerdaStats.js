@@ -3,12 +3,12 @@ import { Statistic, Card } from "antd";
 import { ArrowUpOutlined, ArrowDownOutlined } from "@ant-design/icons";
 import styled from "styled-components";
 
-const FerdaStats = () => {
-  const StatWrapper = styled.div`
-    display: flex;
-    justify-content: space-between;
-  `;
+const StatWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;
 
+const FerdaStats = () => {
   return (
     <Card>
       <StatWrapper>

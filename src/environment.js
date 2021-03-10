@@ -15,4 +15,5 @@ export const spacing = {
 
 Object.keys(colors).map((key) => {
   colors[key] = Color(colors[key]);
+  return null
 });

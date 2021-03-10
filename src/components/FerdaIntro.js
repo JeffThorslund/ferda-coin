@@ -1,7 +1,7 @@
 import React from "react";
 import { Typography, Card } from "antd";
 
-const { Title, Paragraph, Text, Link } = Typography;
+const { Text } = Typography;
 
 const FerdaIntro = () => {
   return (
